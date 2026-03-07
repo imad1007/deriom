@@ -3,6 +3,8 @@ import { getBlogCategories, blogPosts } from "@/content/blog-posts";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  type SitemapItem = MetadataRoute.Sitemap[number];
+
   const staticPages = [
     "",
     "/iptv",
@@ -31,25 +33,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const now = new Date();
+  const staticEntries: SitemapItem[] = staticPages.map((path) => ({
+    url: `${siteConfig.url}${path}`,
+    lastModified: now,
+    changeFrequency: path === "" ? "weekly" : "monthly",
+    priority: path === "" || path === "/iptv" ? 1 : 0.8
+  }));
 
-  return [
-    ...staticPages.map((path) => ({
-      url: `${siteConfig.url}${path}`,
-      lastModified: now,
-      changeFrequency: path === "" ? "weekly" : "monthly",
-      priority: path === "" || path === "/iptv" ? 1 : 0.8
-    })),
-    ...blogPosts.map((post) => ({
-      url: `${siteConfig.url}/blog/${post.slug}`,
-      lastModified: new Date(post.dateModified),
-      changeFrequency: "monthly",
-      priority: 0.7
-    })),
-    ...getBlogCategories().map((category) => ({
-      url: `${siteConfig.url}/blog/category/${category.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.6
-    }))
-  ];
+  const blogEntries: SitemapItem[] = blogPosts.map((post) => ({
+    url: `${siteConfig.url}/blog/${post.slug}`,
+    lastModified: new Date(post.dateModified),
+    changeFrequency: "monthly",
+    priority: 0.7
+  }));
+
+  const categoryEntries: SitemapItem[] = getBlogCategories().map((category) => ({
+    url: `${siteConfig.url}/blog/category/${category.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6
+  }));
+
+  return [...staticEntries, ...blogEntries, ...categoryEntries];
 }
