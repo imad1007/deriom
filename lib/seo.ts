@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
-import type { PageSeo } from "@/lib/validators";
+import type { PageSeoInput } from "@/lib/validators";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteConfig.url).toString();
 }
 
-export function buildMetadata(input: PageSeo): Metadata {
+export function buildMetadata(input: PageSeoInput): Metadata {
   const canonical = absoluteUrl(input.path);
   const isPreviewDeployment =
     process.env.VERCEL === "1" && process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production";

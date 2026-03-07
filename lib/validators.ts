@@ -25,3 +25,4 @@ export const pageSeoSchema = z.object({
 export type FAQ = z.infer<typeof faqSchema>;
 export type Plan = z.infer<typeof planSchema>;
 export type PageSeo = z.infer<typeof pageSeoSchema>;
+export type PageSeoInput = z.input<typeof pageSeoSchema>;
