@@ -1,0 +1,145 @@
+import { faqSchema, planSchema } from "@/lib/validators";
+
+export const navigation = {
+  main: [
+    { label: "IPTV", href: "/iptv" },
+    { label: "Player", href: "/iptv-player" },
+    { label: "Subscription", href: "/iptv-subscription" },
+    { label: "VOD", href: "/iptv-vod" },
+    { label: "Blog", href: "/blog" }
+  ],
+  footer: [
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms", href: "/terms" }
+  ]
+};
+
+export const benefits = [
+  {
+    title: "Licensed content only",
+    description:
+      "Every live channel and on-demand title is positioned as licensed inventory, with transparent provider relationships and compliance-first messaging."
+  },
+  {
+    title: "Fast IPTV streaming",
+    description:
+      "Server-rendered landing pages and a lightweight UI keep the experience fast for both search engines and end users."
+  },
+  {
+    title: "Built for every screen",
+    description:
+      "Use one account across Smart TVs, phones, tablets, Fire TV, and modern web browsers with synced favorites and profiles."
+  },
+  {
+    title: "Trust signals baked in",
+    description:
+      "Clear uptime, support, device compatibility, and parental control messaging reduce friction for subscription decisions."
+  }
+];
+
+export const deviceCards = [
+  { title: "Smart TV", href: "/devices/smart-tv", description: "Native-feeling IPTV on living room screens." },
+  { title: "Android", href: "/devices/android", description: "Optimized for Android phones, tablets, and TV boxes." },
+  { title: "iPhone & iPad", href: "/devices/iphone-ipad", description: "Reliable playback, offline lists, and AirPlay-friendly controls." },
+  { title: "Fire TV", href: "/devices/fire-tv", description: "Remote-first navigation and smooth switching between channels and VOD." },
+  { title: "Web Browser", href: "/devices/web-browser", description: "Zero-install access in Chrome, Safari, Edge, and Firefox." }
+];
+
+export const channelCategories = [
+  "News",
+  "Sports",
+  "Movies",
+  "Series",
+  "Kids",
+  "Lifestyle",
+  "Documentaries",
+  "International"
+];
+
+export const sampleChannels = [
+  { name: "City News Live", category: "News" },
+  { name: "Arena Sports One", category: "Sports" },
+  { name: "Studio Premiere", category: "Movies" },
+  { name: "Family Hub", category: "Kids" },
+  { name: "DocuSphere", category: "Documentaries" },
+  { name: "World Cinema", category: "International" }
+];
+
+export const plans = planSchema.array().parse([
+  {
+    name: "Starter",
+    priceMonthly: 14,
+    description: "A simple legal IPTV subscription for single-screen viewing.",
+    features: ["75+ licensed channels", "HD streaming", "7-day catch-up on select channels", "Email support"],
+    cta: "Start Starter"
+  },
+  {
+    name: "Plus",
+    priceMonthly: 24,
+    description: "Balanced plan for families that switch between live IPTV and VOD often.",
+    badge: "Most popular",
+    features: [
+      "150+ licensed channels",
+      "Full HD and select 4K events",
+      "2 simultaneous streams",
+      "Expanded VOD library",
+      "Priority support"
+    ],
+    cta: "Choose Plus"
+  },
+  {
+    name: "Premium",
+    priceMonthly: 39,
+    description: "Best for heavy viewing households needing broader access and stronger controls.",
+    features: [
+      "220+ licensed channels",
+      "3 simultaneous streams",
+      "Premium sports and movie packs",
+      "Advanced parental controls",
+      "White-glove onboarding"
+    ],
+    cta: "Get Premium"
+  }
+]);
+
+export const trustStats = [
+  { value: "99.95%", label: "platform uptime target" },
+  { value: "< 5 min", label: "average support response during business hours" },
+  { value: "25+", label: "device types supported" },
+  { value: "7 days", label: "catch-up availability on selected channels" }
+];
+
+export const globalFaqs = faqSchema.array().parse([
+  {
+    question: "What is legal IPTV?",
+    answer:
+      "Legal IPTV delivers television and video content over internet protocols with the appropriate licenses and distribution rights in place."
+  },
+  {
+    question: "Is this IPTV service focused on licensed content only?",
+    answer:
+      "Yes. The platform messaging, product structure, and content positioning are designed around licensed live channels and authorized on-demand content."
+  },
+  {
+    question: "Can I use the IPTV app on multiple devices?",
+    answer:
+      "Yes. Plans support different levels of concurrent streaming, and the player experience is tailored for Smart TVs, mobile devices, Fire TV, and browsers."
+  },
+  {
+    question: "Does the service include VOD and live channels?",
+    answer:
+      "Yes. The product combines linear live channel viewing with an organized VOD library, watchlists, search, and recommendation workflows."
+  }
+]);
+
+export const featureHighlights = [
+  "Live channels with fast switching and clear categorization",
+  "Catch-up TV to revisit selected programmes",
+  "Detailed EPG and TV guide views",
+  "Multi-device streaming and profile sync",
+  "Favorites, watchlists, and resume points",
+  "Parental controls with PIN-based access rules",
+  "Search and recommendations tuned for discovery"
+];
