@@ -27,7 +27,7 @@ export default function FeaturesPage() {
                 <h2 className="text-xl font-semibold text-white">{feature.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{feature.description}</p>
                 <Link className="mt-5 inline-flex text-sm font-semibold text-[var(--primary-strong)]" href={`/features/${slug}`}>
-                  Visit page
+                  Visit {feature.title} page
                 </Link>
               </Card>
             ))}

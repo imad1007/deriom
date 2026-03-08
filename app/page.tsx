@@ -64,7 +64,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-white">{device.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{device.description}</p>
                 <Link className="mt-5 inline-flex text-sm font-semibold text-[var(--primary-strong)]" href={device.href}>
-                  Explore device page
+                  Explore {device.title} IPTV
                 </Link>
               </Card>
             ))}
@@ -136,7 +136,7 @@ export default function HomePage() {
                 <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.copy}</p>
                 <Link className="mt-5 inline-flex text-sm font-semibold text-[var(--primary-strong)]" href={item.href}>
-                  Visit page
+                  Visit {item.title} page
                 </Link>
               </Card>
             ))}

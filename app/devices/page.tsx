@@ -27,7 +27,7 @@ export default function DevicesPage() {
                 <h2 className="text-xl font-semibold text-white">{device.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{device.description}</p>
                 <Link className="mt-5 inline-flex text-sm font-semibold text-[var(--primary-strong)]" href={device.href}>
-                  Visit page
+                  Visit {device.title} device page
                 </Link>
               </Card>
             ))}
