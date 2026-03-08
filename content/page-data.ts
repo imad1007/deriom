@@ -19,7 +19,7 @@ export const pageSeo = {
   player: pageSeoSchema.parse({
     title: mergeTitle("IPTV Player App for Smart TV, Mobile, Fire TV, and Web"),
     description:
-      "Learn how the Streamline IPTV player delivers responsive playback, search, recommendations, channel switching, and cross-device continuity.",
+      "Learn how the deriom IPTV player delivers responsive playback, search, recommendations, channel switching, and cross-device continuity.",
     path: "/iptv-player",
     keywords: ["iptv player", "iptv app", "smart tv iptv", "iptv player app"]
   }),
@@ -52,25 +52,25 @@ export const pageSeo = {
     keywords: ["iptv channels", "live tv streaming", "smart tv iptv", "iptv live tv"]
   }),
   about: pageSeoSchema.parse({
-    title: mergeTitle("About Streamline IPTV"),
+    title: mergeTitle("About deriom IPTV"),
     description:
-      "Learn about Streamline IPTV, our compliance-first product approach, device strategy, and focus on licensed streaming experiences.",
+      "Learn about deriom IPTV, our compliance-first product approach, device strategy, and focus on licensed streaming experiences.",
     path: "/about"
   }),
   contact: pageSeoSchema.parse({
-    title: mergeTitle("Contact Streamline IPTV"),
+    title: mergeTitle("Contact deriom IPTV"),
     description:
-      "Reach the Streamline IPTV team for sales, support, partnerships, and compliance-related questions.",
+      "Reach the deriom IPTV team for sales, support, partnerships, and compliance-related questions.",
     path: "/contact"
   }),
   privacy: pageSeoSchema.parse({
     title: mergeTitle("Privacy Policy"),
-    description: "Review the privacy policy for Streamline IPTV.",
+    description: "Review the privacy policy for deriom IPTV.",
     path: "/privacy"
   }),
   terms: pageSeoSchema.parse({
     title: mergeTitle("Terms of Service"),
-    description: "Review the terms of service for Streamline IPTV.",
+    description: "Review the terms of service for deriom IPTV.",
     path: "/terms"
   }),
   blog: pageSeoSchema.parse({

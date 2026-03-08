@@ -14,10 +14,10 @@ export default function AboutPage() {
       <section className="py-16 md:py-20">
         <div className="container max-w-4xl">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]} />
-          <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">About Streamline IPTV</h1>
+          <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">About deriom IPTV</h1>
           <div className="mt-10 grid gap-5">
             {[
-              "Streamline IPTV is framed as a legal IPTV platform for licensed live channels and on-demand viewing across major consumer devices.",
+              "deriom IPTV is framed as a legal IPTV platform for licensed live channels and on-demand viewing across major consumer devices.",
               "The product strategy emphasizes clarity, subscription trust, device compatibility, and a user experience that feels premium without excess complexity.",
               "From an SEO perspective, the site architecture is designed to publish original pages that answer specific viewer and buyer questions instead of producing duplicate keyword pages."
             ].map((paragraph) => (

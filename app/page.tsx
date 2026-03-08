@@ -34,7 +34,7 @@ export default function HomePage() {
             { name: "Home", path: "/" }
           ]),
           serviceSchema({
-            name: "Streamline IPTV Platform",
+            name: "deriom IPTV Platform",
             description: pageSeo.home.description,
             path: "/"
           }),
@@ -146,7 +146,7 @@ export default function HomePage() {
 
       <ComparisonTable
         title="IPTV vs cable for digital-first households"
-        leftLabel="Streamline IPTV"
+        leftLabel="deriom IPTV"
         rightLabel="Traditional cable"
         rows={[
           { topic: "Device access", left: "Smart TV, mobile, Fire TV, web browser", right: "Primarily set-top-box based" },

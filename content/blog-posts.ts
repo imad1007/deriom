@@ -143,7 +143,7 @@ export const blogPosts = blogPostSchema.array().parse([
         title: "Why trustworthy IPTV sites need strong content architecture",
         content: [
           "Thin pages and vague claims are a poor fit for modern SEO. Pages should answer setup questions, explain product differences, and provide useful comparisons such as IPTV vs cable.",
-          "That is why Streamline uses dedicated feature, device, and FAQ pages instead of repeating the same keyword-heavy copy."
+          "That is why deriom uses dedicated feature, device, and FAQ pages instead of repeating the same keyword-heavy copy."
         ]
       }
     ]

@@ -16,7 +16,7 @@ export function Hero() {
             IPTV streaming built for licensed live TV, premium VOD, and device-first viewing.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
-            Streamline IPTV combines a polished IPTV player, curated live channels, and compliant subscription plans for Smart TVs, mobile apps, Fire TV, and the web.
+            deriom IPTV combines a polished IPTV player, curated live channels, and compliant subscription plans for Smart TVs, mobile apps, Fire TV, and the web.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="/iptv-subscription">
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
           <div className="mt-6 overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(180deg,rgba(61,217,165,0.08),rgba(255,255,255,0.02))] p-6">
             <Image
-              alt="Preview of Streamline IPTV interface showing live channels and VOD rows"
+              alt="Preview of deriom IPTV interface showing live channels and VOD rows"
               className="mb-5 w-full rounded-[1.5rem] border border-white/10"
               height={720}
               priority

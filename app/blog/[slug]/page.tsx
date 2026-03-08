@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: Params) {
             <Card className="mt-12 p-7">
               <h2 className="text-2xl font-semibold text-white">Author</h2>
               <p className="mt-4 text-base leading-8 text-[var(--muted-strong)]">
-                {post.author.name} is the {post.author.role.toLowerCase()} at Streamline IPTV, writing about product clarity, legal IPTV positioning, and scalable content strategy.
+                {post.author.name} is the {post.author.role.toLowerCase()} at deriom IPTV, writing about product clarity, legal IPTV positioning, and scalable content strategy.
               </p>
             </Card>
           </div>

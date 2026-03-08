@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact", href: "/contact" }]} />
-            <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">Contact Streamline IPTV</h1>
+            <h1 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">Contact deriom IPTV</h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
               For subscription guidance, partnerships, support escalation, or compliance questions, contact the team directly.
             </p>

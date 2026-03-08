@@ -24,7 +24,7 @@ export default function Image() {
         }}
       >
         <div style={{ fontSize: 28, letterSpacing: 8, textTransform: "uppercase", color: "#72f1c3" }}>
-          Streamline IPTV
+          deriom IPTV
         </div>
         <div>
           <div style={{ fontSize: 74, lineHeight: 1.05, fontWeight: 700, maxWidth: 860 }}>

@@ -8,7 +8,7 @@ import { buildMetadata, mergeTitle } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: mergeTitle("IPTV Devices"),
-  description: "Explore the devices supported by Streamline IPTV, including Smart TV, Android, iPhone, Fire TV, and web browsers.",
+  description: "Explore the devices supported by deriom IPTV, including Smart TV, Android, iPhone, Fire TV, and web browsers.",
   path: "/devices",
   keywords: ["iptv devices", "smart tv iptv", "iptv app"]
 });

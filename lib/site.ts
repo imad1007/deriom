@@ -7,15 +7,15 @@ const deploymentUrl =
       : "http://localhost:3000");
 
 export const siteConfig = {
-  name: "Streamline IPTV",
-  shortName: "Streamline",
+  name: "deriom IPTV",
+  shortName: "deriom",
   description:
     "A legal IPTV platform for licensed live channels, premium VOD, and a polished IPTV player across Smart TVs, phones, browsers, and streaming devices.",
   url: deploymentUrl,
   ogImage: "/opengraph-image",
-  supportEmail: "support@streamlineiptv.com",
+  supportEmail: "support@deriom.com",
   social: {
-    x: "https://x.com/streamlineiptv",
-    linkedin: "https://www.linkedin.com/company/streamlineiptv"
+    x: "https://x.com/deriom",
+    linkedin: "https://www.linkedin.com/company/deriom"
   }
 } as const;
