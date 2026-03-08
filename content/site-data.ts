@@ -69,38 +69,86 @@ export const sampleChannels = [
 
 export const plans = planSchema.array().parse([
   {
-    name: "Starter",
-    priceMonthly: 14,
-    description: "A simple legal IPTV subscription for single-screen viewing.",
-    features: ["75+ licensed channels", "HD streaming", "7-day catch-up on select channels", "Email support"],
-    cta: "Start Starter"
+    name: "3 Month IPTV",
+    durationLabel: "3 MONTH IPTV",
+    paymentLabel: "One Time Payment",
+    priceGBP: "£35",
+    priceUSD: "$47",
+    description:
+      "Choose the IPTV subscription that suits you best, with multiple connections available to add.",
+    features: [
+      "One-time payment",
+      "Reliable viewing",
+      "Local streams | Local servers",
+      "Works on any device",
+      "Worldwide channels",
+      "100,000+ movies & series",
+      "No VPN required (optional)",
+      "Multiple connections available"
+    ],
+    additionalConnections: [
+      { label: "1 Additional Connection", priceUSD: "+ $16.45" },
+      { label: "2 Additional Connection", priceUSD: "+ $25.85" },
+      { label: "3 Additional Connection", priceUSD: "+ $33.25" },
+      { label: "4 Additional Connection", priceUSD: "+ $44.65" },
+      { label: "5 Additional Connection", priceUSD: "+ $56.40" }
+    ],
+    cta: "Buy Now"
   },
   {
-    name: "Plus",
-    priceMonthly: 24,
-    description: "Balanced plan for families that switch between live IPTV and VOD often.",
-    badge: "Most popular",
+    name: "6 Month IPTV",
+    durationLabel: "6 MONTH IPTV",
+    paymentLabel: "One Time Payment",
+    priceGBP: "£50",
+    priceUSD: "$67",
+    description:
+      "Find our paid plans below for IPTV, with broad international coverage, VOD access, and a strong focus on USA, Canada, UK, and major sporting events.",
+    badge: "Popular",
     features: [
-      "150+ licensed channels",
-      "Full HD and select 4K events",
-      "2 simultaneous streams",
-      "Expanded VOD library",
-      "Priority support"
+      "One-time payment",
+      "Reliable viewing",
+      "Local streams | Local servers",
+      "Works on any device",
+      "Worldwide channels",
+      "100,000+ movies & series",
+      "No VPN required (optional)",
+      "Multiple connections available"
     ],
-    cta: "Choose Plus"
+    additionalConnections: [
+      { label: "1 Additional Connection", priceUSD: "+ $23.45" },
+      { label: "2 Additional Connection", priceUSD: "+ $36.85" },
+      { label: "3 Additional Connection", priceUSD: "+ $50.25" },
+      { label: "4 Additional Connection", priceUSD: "+ $63.65" },
+      { label: "5 Additional Connection", priceUSD: "+ $80.40" }
+    ],
+    cta: "Buy Now"
   },
   {
-    name: "Premium",
-    priceMonthly: 39,
-    description: "Best for heavy viewing households needing broader access and stronger controls.",
+    name: "12 Month IPTV",
+    durationLabel: "12 MONTH IPTV",
+    paymentLabel: "One Time Payment",
+    priceGBP: "£75",
+    priceUSD: "$99",
+    description:
+      "Longer-term IPTV plan with the same viewing stack, one-time billing, and optional extra connections for larger households.",
     features: [
-      "220+ licensed channels",
-      "3 simultaneous streams",
-      "Premium sports and movie packs",
-      "Advanced parental controls",
-      "White-glove onboarding"
+      "One-time payment",
+      "Reliable viewing",
+      "Local streams | Local servers",
+      "Works on any device",
+      "Worldwide channels",
+      "100,000+ movies & series",
+      "No VPN required (optional)",
+      "Multiple connections available"
     ],
-    cta: "Get Premium"
+    additionalConnections: [
+      { label: "1 Additional Connection", priceUSD: "+ $34.65" },
+      { label: "2 Additional Connection", priceUSD: "+ $54.45" },
+      { label: "3 Additional Connection", priceUSD: "+ $74.25" },
+      { label: "4 Additional Connection", priceUSD: "+ $94.05" },
+      { label: "5 Additional Connection", priceUSD: "+ $118.8" }
+    ],
+    cta: "Buy Now"
   }
 ]);
 

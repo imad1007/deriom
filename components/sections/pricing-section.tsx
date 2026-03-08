@@ -3,7 +3,6 @@ import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { plans } from "@/content/site-data";
-import { formatCurrency } from "@/lib/utils";
 
 export function PricingSection() {
   return (
@@ -11,14 +10,17 @@ export function PricingSection() {
       <div className="container">
         <SectionHeading
           eyebrow="Pricing"
-          title="Choose an IPTV subscription plan that matches how people actually watch"
-          description="Pricing is framed around concurrent streams, premium channel access, and support depth rather than vague unlimited promises."
+          title="Choose the IPTV subscription that suits you best, with multiple connections available to add"
+          description="Find the current paid IPTV plan formats below, including one-time payment pricing, device compatibility, and optional additional connections."
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {plans.map((plan) => (
             <Card className="flex flex-col p-7" key={plan.name}>
               <div className="flex items-start justify-between gap-3">
                 <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--primary-strong)]">
+                    {plan.durationLabel}
+                  </p>
                   <h3 className="text-xl font-semibold text-white">{plan.name}</h3>
                   <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{plan.description}</p>
                 </div>
@@ -28,10 +30,15 @@ export function PricingSection() {
                   </span>
                 ) : null}
               </div>
-              <p className="mt-6 text-4xl font-semibold text-white">
-                {formatCurrency(plan.priceMonthly)}
-                <span className="text-base text-[var(--muted)]">/month</span>
-              </p>
+              <div className="mt-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--muted-strong)]">
+                  {plan.paymentLabel}
+                </p>
+                <p className="mt-3 text-4xl font-semibold text-white">
+                  {plan.priceGBP}
+                  <span className="ml-2 text-xl text-[var(--muted)]">/ {plan.priceUSD}</span>
+                </p>
+              </div>
               <ul className="mt-6 space-y-3 text-sm text-[var(--muted-strong)]">
                 {plan.features.map((feature) => (
                   <li className="flex gap-3" key={feature}>
@@ -40,6 +47,19 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary-strong)]">
+                  Additional Connections
+                </p>
+                <ul className="mt-4 space-y-3 text-sm text-[var(--muted-strong)]">
+                  {plan.additionalConnections.map((connection) => (
+                    <li className="flex items-center justify-between gap-4" key={connection.label}>
+                      <span>{connection.label}</span>
+                      <span className="font-semibold text-white">{connection.priceUSD}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <Button className="mt-8 w-full" href="/contact">
                 {plan.cta}
               </Button>

@@ -52,13 +52,13 @@ export default function IptvSubscriptionPage() {
             IPTV subscription plans designed around households, devices, and support expectations
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">
-            This page is built for subscription intent. It compares plan value clearly and uses legal, support, and device messaging to reduce hesitation without resorting to spammy pricing tactics.
+            Choose the IPTV subscription that suits you best, with multiple connections available to add. The plans below use one-time payment pricing and combine device support, worldwide channel access, and VOD library messaging in a clearer commercial format.
           </p>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
-              "Transparent monthly plans",
-              "Support and onboarding detail",
-              "Concurrent stream limits explained"
+              "3, 6, and 12 month one-time payment plans",
+              "Additional connections priced per plan",
+              "Works on any device with VOD included"
             ].map((item) => (
               <Card className="p-6 text-base text-[var(--muted-strong)]" key={item}>
                 {item}

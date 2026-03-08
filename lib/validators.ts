@@ -7,10 +7,19 @@ export const faqSchema = z.object({
 
 export const planSchema = z.object({
   name: z.string(),
-  priceMonthly: z.number(),
+  durationLabel: z.string(),
+  paymentLabel: z.string(),
+  priceGBP: z.string(),
+  priceUSD: z.string(),
   description: z.string(),
   badge: z.string().optional(),
   features: z.array(z.string()),
+  additionalConnections: z.array(
+    z.object({
+      label: z.string(),
+      priceUSD: z.string()
+    })
+  ),
   cta: z.string()
 });
 
