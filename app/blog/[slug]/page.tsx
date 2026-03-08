@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQList } from "@/components/sections/faq-list";
@@ -57,7 +58,8 @@ export default async function BlogPostPage({ params }: Params) {
             path: `/blog/${post.slug}`,
             datePublished: post.datePublished,
             dateModified: post.dateModified,
-            authorName: post.author.name
+            authorName: post.author.name,
+            image: post.image
           }),
           faqSchema(post.faq)
         ]}
@@ -72,6 +74,14 @@ export default async function BlogPostPage({ params }: Params) {
             <div className="mt-6 text-sm text-[var(--muted-strong)]">
               {post.author.name} · {post.author.role} · {post.readingTime}
             </div>
+            <Image
+              alt={post.imageAlt}
+              className="mt-8 h-auto w-full rounded-[2rem] border border-white/10 object-cover"
+              height={720}
+              priority
+              src={post.image}
+              width={1200}
+            />
 
             <div className="prose mt-12 max-w-none space-y-10">
               {post.sections.map((section) => (

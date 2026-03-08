@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -61,8 +62,19 @@ export default async function BlogCategoryPage({ params }: Params) {
           <div className="mt-12 grid gap-5">
             {posts.map((post) => (
               <Card className="p-7" key={post.slug}>
+                <Link href={`/blog/${post.slug}`}>
+                  <Image
+                    alt={post.imageAlt}
+                    className="h-56 w-full rounded-[1.75rem] object-cover"
+                    height={480}
+                    src={post.image}
+                    width={960}
+                  />
+                </Link>
                 <h2 className="text-2xl font-semibold text-white">
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  <Link className="mt-5 inline-block" href={`/blog/${post.slug}`}>
+                    {post.title}
+                  </Link>
                 </h2>
                 <p className="mt-4 text-base leading-8 text-[var(--muted)]">{post.excerpt}</p>
               </Card>

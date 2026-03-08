@@ -125,7 +125,9 @@ export default function HomePage() {
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {[
               { title: "IPTV", href: "/iptv", icon: Tv, copy: "Broad commercial landing page for licensed IPTV intent." },
+              { title: "Streaming", href: "/iptv-streaming", icon: Search, copy: "Explains the streaming layer, quality factors, and delivery workflows." },
               { title: "IPTV Player", href: "/iptv-player", icon: MonitorSmartphone, copy: "Feature and UX-focused page for player-specific intent." },
+              { title: "Channels", href: "/iptv-channels", icon: Tv, copy: "Covers channel categories, discovery, and guide expectations." },
               { title: "Subscription", href: "/iptv-subscription", icon: Wallet, copy: "Pricing, trust, and plan comparison content." },
               { title: "VOD", href: "/iptv-vod", icon: Search, copy: "On-demand discovery and library depth messaging." }
             ].map((item) => (

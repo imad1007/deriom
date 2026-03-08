@@ -37,6 +37,20 @@ export const pageSeo = {
     path: "/iptv-vod",
     keywords: ["iptv vod", "iptv on demand", "iptv streaming"]
   }),
+  streaming: pageSeoSchema.parse({
+    title: mergeTitle("IPTV Streaming Platform for Live TV on Every Screen"),
+    description:
+      "Learn how an IPTV streaming platform delivers live TV, adaptive playback, device flexibility, and reliable viewing across modern screens.",
+    path: "/iptv-streaming",
+    keywords: ["iptv streaming", "iptv streaming service", "iptv streaming platform", "live tv streaming via iptv"]
+  }),
+  channels: pageSeoSchema.parse({
+    title: mergeTitle("IPTV Channels for News, Sports, Entertainment, and International TV"),
+    description:
+      "Explore IPTV channels by category, understand guide and catch-up workflows, and see how channel organization improves the viewing experience.",
+    path: "/iptv-channels",
+    keywords: ["iptv channels", "live tv streaming", "smart tv iptv", "iptv live tv"]
+  }),
   about: pageSeoSchema.parse({
     title: mergeTitle("About Streamline IPTV"),
     description:

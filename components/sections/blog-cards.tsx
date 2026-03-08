@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
 import { Card } from "@/components/ui/card";
 import type { BlogPost } from "@/content/blog-posts";
@@ -20,8 +21,17 @@ export function BlogCards({
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {posts.map((post) => (
             <Card className="p-6" key={post.slug}>
+              <Link href={`/blog/${post.slug}`}>
+                <Image
+                  alt={post.imageAlt}
+                  className="h-52 w-full rounded-[1.5rem] object-cover"
+                  height={420}
+                  src={post.image}
+                  width={720}
+                />
+              </Link>
               <Link
-                className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary-strong)]"
+                className="mt-5 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary-strong)]"
                 href={`/blog/category/${slugifyCategory(post.category)}`}
               >
                 {post.category}

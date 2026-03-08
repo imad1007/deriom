@@ -75,7 +75,8 @@ export default function IptvPage() {
               "VOD library with recommendations and continue watching",
               "Smart TV, Android, iPhone, Fire TV, and browser support",
               "Plans built around stream limits and premium access",
-              "Catch-up TV and EPG workflows for schedule-based viewing"
+              "Catch-up TV and EPG workflows for schedule-based viewing",
+              "Dedicated pages for streaming technology and channel discovery intent"
             ].map((item) => (
               <Card className="p-6" key={item}>
                 <p className="text-base text-[var(--muted-strong)]">{item}</p>

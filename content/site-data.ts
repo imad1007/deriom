@@ -3,6 +3,7 @@ import { faqSchema, planSchema } from "@/lib/validators";
 export const navigation = {
   main: [
     { label: "IPTV", href: "/iptv" },
+    { label: "Streaming", href: "/iptv-streaming" },
     { label: "Player", href: "/iptv-player" },
     { label: "Subscription", href: "/iptv-subscription" },
     { label: "VOD", href: "/iptv-vod" },
@@ -45,6 +46,39 @@ export const deviceCards = [
   { title: "iPhone & iPad", href: "/devices/iphone-ipad", description: "Reliable playback, offline lists, and AirPlay-friendly controls." },
   { title: "Fire TV", href: "/devices/fire-tv", description: "Remote-first navigation and smooth switching between channels and VOD." },
   { title: "Web Browser", href: "/devices/web-browser", description: "Zero-install access in Chrome, Safari, Edge, and Firefox." }
+];
+
+export const channelCategoryCards = [
+  {
+    title: "News Channels",
+    description:
+      "Live local and international news channels for always-on updates, regional coverage, and fast access to trusted broadcasters."
+  },
+  {
+    title: "Sports Channels",
+    description:
+      "Sports-focused channel groupings that help households find major events, league coverage, and appointment viewing more quickly."
+  },
+  {
+    title: "Entertainment",
+    description:
+      "General entertainment channels spanning dramas, reality formats, talk shows, and prime-time programming."
+  },
+  {
+    title: "Kids and Family",
+    description:
+      "Family-friendly channel organization supported by parental controls and easier household-safe discovery."
+  },
+  {
+    title: "International",
+    description:
+      "Regional and language-specific channel curation for multilingual households and international viewing habits."
+  },
+  {
+    title: "Music and Culture",
+    description:
+      "Niche channel coverage for concerts, documentaries, arts, and culture-focused programming."
+  }
 ];
 
 export const channelCategories = [

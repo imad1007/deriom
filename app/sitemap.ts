@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/iptv",
+    "/iptv-streaming",
+    "/iptv-channels",
     "/iptv-player",
     "/iptv-subscription",
     "/iptv-vod",

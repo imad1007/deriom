@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { NewsletterCard } from "@/components/sections/newsletter-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -32,8 +33,17 @@ export default function BlogPage() {
             <div className="grid gap-5">
               {blogPosts.map((post) => (
                 <Card className="p-7" key={post.slug}>
+                  <Link href={`/blog/${post.slug}`}>
+                    <Image
+                      alt={post.imageAlt}
+                      className="h-60 w-full rounded-[1.75rem] object-cover"
+                      height={480}
+                      src={post.image}
+                      width={960}
+                    />
+                  </Link>
                   <Link
-                    className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary-strong)]"
+                    className="mt-5 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary-strong)]"
                     href={`/blog/category/${slugifyCategory(post.category)}`}
                   >
                     {post.category}
