@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/seo/json-ld";
 import { organizationSchema, websiteSchema } from "@/components/seo/schema";
 import "@/app/globals.css";
+import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -25,6 +27,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Script
+          async
+          id="google-tag"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <Header />
         <main>{children}</main>
